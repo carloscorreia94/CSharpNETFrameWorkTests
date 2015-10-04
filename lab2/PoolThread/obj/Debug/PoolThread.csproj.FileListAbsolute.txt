@@ -1,0 +1,6 @@
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\bin\Debug\PoolThread.exe.config
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\obj\Debug\PoolThread.csprojResolveAssemblyReference.cache
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\bin\Debug\PoolThread.exe
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\bin\Debug\PoolThread.pdb
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\obj\Debug\PoolThread.exe
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\obj\Debug\PoolThread.pdb
