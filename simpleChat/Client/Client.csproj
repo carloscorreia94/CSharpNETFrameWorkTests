@@ -18,11 +18,10 @@
     <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
     <DefaultTargetSchema>IE50</DefaultTargetSchema>
     <DelaySign>false</DelaySign>
-    <OutputType>Exe</OutputType>
+    <OutputType>WinExe</OutputType>
     <RootNamespace>Client</RootNamespace>
     <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>SimpleChat.ClientLaunch</StartupObject>
     <FileUpgradeFlags>
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
@@ -83,9 +82,11 @@
     <Reference Include="System.Data">
       <Name>System.Data</Name>
     </Reference>
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Runtime.Remoting">
       <Name>System.Runtime.Remoting</Name>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.XML">
       <Name>System.XML</Name>
     </Reference>
@@ -96,9 +97,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Client.cs">
+    <Compile Include="ClientLaunch.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ChatClientForm.cs">
+      <SubType>Form</SubType>
+      <CustomToolNamespace>SimpleChat</CustomToolNamespace>
+    </Compile>
+    <Compile Include="ChatClientForm.Designer.cs">
+      <DependentUpon>ChatClientForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ChatClientForm.resx">
+      <DependentUpon>ChatClientForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
