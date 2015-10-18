@@ -4,3 +4,6 @@ C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\bin\Debug\PoolT
 C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\bin\Debug\PoolThread.pdb
 C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\obj\Debug\PoolThread.exe
 C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\PoolThread\obj\Debug\PoolThread.pdb
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\lab2\PoolThread\bin\Debug\PoolThread.exe.config
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\lab2\PoolThread\obj\Debug\PoolThread.exe
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\lab2\PoolThread\obj\Debug\PoolThread.pdb

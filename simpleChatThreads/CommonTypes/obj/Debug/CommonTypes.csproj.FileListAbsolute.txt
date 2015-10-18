@@ -1,0 +1,5 @@
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\simpleChat\CommonTypes\bin\Debug\CommonTypes.dll
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\simpleChat\CommonTypes\bin\Debug\CommonTypes.pdb
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\simpleChat\CommonTypes\obj\Debug\CommonTypes.csprojResolveAssemblyReference.cache
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\simpleChat\CommonTypes\obj\Debug\CommonTypes.dll
+C:\Users\labgeek420\Documents\CSharpNETFrameWorkTests\simpleChat\CommonTypes\obj\Debug\CommonTypes.pdb
