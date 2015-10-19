@@ -40,28 +40,28 @@ namespace SimpleChat {
             while (true)
             {
                 Monitor.Enter(this);
-                if (buffer.Count > 0)
-                {
-                    // does work in the first available buffer slot
-                    ThrWork work = (ThrWork)buffer[0];
-                    buffer.RemoveAt(0);
-                    Monitor.Exit(this);
-                    work();
-                }
-                else
-                {
-                    Monitor.Exit(this);
-                }
+                while (buffer.Count == 0) Monitor.Wait(this);
+
+                // does work in the first available buffer slot
+                ThrWork work = (ThrWork)buffer[0];
+                buffer.RemoveAt(0);
+                if (buffer.Count == buffer.Capacity - 1) Monitor.Pulse(this);
+                Monitor.Exit(this);
+                work();
             }
         }
 
         public void AssyncInvoke(ThrWork action)
         {
-            if (buffer.Count != 0 && buffer.Capacity == buffer.Count)
+            Monitor.Enter(this);
+            while (buffer.Count != 0 && buffer.Capacity == buffer.Count)
             {
-                buffer.RemoveAt(0);
+                Monitor.Wait(this);
+                //buffer.RemoveAt(0);
             }
             buffer.Add(action);
+            if (buffer.Count == 1) Monitor.Pulse(this);
+            Monitor.Exit(this);
         }
     }
 
@@ -70,6 +70,8 @@ namespace SimpleChat {
     {
         private String nick, msg;
         private ChatClient refl;
+        static public List<B> bcastList = new List<B>();
+
         public B(String nick, String msg, ChatClient refl)
         {
             this.nick = nick;
@@ -80,6 +82,7 @@ namespace SimpleChat {
         public void DoWorkB()
         {
             refl.print(nick, msg);
+            bcastList.Remove(this);
         }
     }
 
@@ -145,6 +148,7 @@ namespace SimpleChat {
                 if (c.name == nick)
                     continue;
                 B b = new B(nick, msg, c._ref);
+                B.bcastList.Add(b);
                 tpool.AssyncInvoke(new ThrWork(b.DoWorkB));
             }
         }
